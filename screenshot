@@ -6,5 +6,17 @@ public void test() throws IOException
     File desc=new File("Path");
     File Utils.copyFile(src,desc);
 }
+
+//If didn't work
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+TakesScreenshot ts = (TakesScreenshot) driver;
+File source =  ts.getScreenshotAs(OutputType.FILE);
+String destination = "screenshots/myscreenshot.png";
+FileUtils.copyFile(source, new File(destination));
+
+
 //Screenshot if utils gvn 
 Screenshot.getScrenshot(driver,"screenshot");
