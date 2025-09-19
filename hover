@@ -1,0 +1,5 @@
+import org.openqa.selenium.interactions.Actions;
+
+WebElement menu = driver.findElement(By.id("menu"));
+Actions actions = new Actions(driver);
+actions.moveToElement(menu).perform();
