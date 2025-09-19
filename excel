@@ -1,0 +1,20 @@
+//Reading data from excel file (given seprately)
+@Test
+public void test()
+{
+    FileInputStream fis=new FileInputStream("path");
+    Workbook wb=new XSSFWorkbook(fis);
+    Sheet sh=wb.getSheetAt(0);
+    Row row=sh.getRow(0);
+    String ss=row.getCell(0).getStringCellValue();
+    driver.findElement(By.xpath("")).sendKeys(ss);
+    wb.close();
+    fis.close();
+}
+
+//excel if utils gvn
+Excel
+Create testdata folder
+Data.xlsx file in it
+String username=ExcelReader.readdata("testdata/data.xlsx","Sheet1",0,0);
+driver.findElement(By.xpath()).sendKeys(username);
