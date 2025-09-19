@@ -1,0 +1,8 @@
+String parent = driver.getWindowHandle();
+Set<String> windows = driver.getWindowHandles();
+
+for (String win : windows) {
+    if (!win.equals(parent)) {
+        driver.switchTo().window(win);
+    }
+}
