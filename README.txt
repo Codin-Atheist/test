@@ -138,6 +138,7 @@ WebElement menu = driver.findElement(By.id("menu"));
 Actions actions = new Actions(driver);
 actions.moveToElement(menu).perform();
 
+//log4j.properties
 //Define the root logger with the DailyRollingFileAppender
 log4j.rootLogger=DEBUG, RollingAppender
 
@@ -148,12 +149,11 @@ log4j.appender.RollingAppender.DatePattern='.'yyyy-MM-dd_HH-mm-ss
 log4j.appender.RollingAppender.layout=org.apache.log4j.PatternLayout
 log4j.appender.RollingAppender.layout.ConversionPattern=[%d{yyyy-MM-dd HH:mm:ss}] [%p] %c %M - %m%n
 
-//log4j.properties
-
+//scroll
 WebElement element = driver.findElement(By.id("footer"));
 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-//helper 
+//First use this
 WebdriverHelper helper;
 
 WebElement user = driver.findElement(By.id("user"));
