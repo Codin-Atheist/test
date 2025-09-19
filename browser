@@ -1,0 +1,4 @@
+executiontype = remote
+browsername = chrome
+gridurl = http://localhost:4444
+url = 
