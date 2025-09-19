@@ -1,0 +1,10 @@
+//Screenshot(gvn seprately)
+@Test 
+public void test() throws IOException
+{
+    File src=((TakesScreenshot)driver).getScrenshotsAs(OutputType.FILE);
+    File desc=new File("Path");
+    File Utils.copyFile(src,desc);
+}
+//Screenshot if utils gvn 
+Screenshot.getScrenshot(driver,"screenshot");
