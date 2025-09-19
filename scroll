@@ -1,0 +1,8 @@
+WebElement element = driver.findElement(By.id("footer"));
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+//helper 
+WebdriverHelper helper;
+
+WebElement user = driver.findElement(By.id("user"));
+helper.javascriptscroll(user);
