@@ -1,9 +1,11 @@
 //Screenshot(gvn seprately)
 @Test 
 public void test() throws IOException
+
 {
+    String Path = "screenshots/myscreenshot.png";
     File src=((TakesScreenshot)driver).getScrenshotsAs(OutputType.FILE);
-    File desc=new File("Path");
+    File desc=new File(Path);
     File Utils.copyFile(src,desc);
 }
 
